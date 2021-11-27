@@ -1,0 +1,13 @@
+
+POST http://localhost:3000/bill 
+Content-Type: application/json
+
+[{
+    "item": "Classical Songs Collection",
+       "itemCategory": "Music",
+       "quantity": 1,
+       "price": 500
+
+}]
+
+
