@@ -10,7 +10,7 @@ const calculateTotalBill = (productList)=> {
             totalBill += medFoodAmount + tax
             totalTax += tax
         }
-        if (each.itemCategory === 'Clothes'){
+        else if (each.itemCategory === 'Clothes'){
             let clothsAmount = each.price * each.quantity
             if (clothsAmount < 1000){
                 tax = (clothsAmount * 5) /100   // tax rate on Cloth items is 5% if amount is less than RS. 1000 //
@@ -20,19 +20,19 @@ const calculateTotalBill = (productList)=> {
             totalBill += clothsAmount + tax
             totalTax += tax
         }
-        if (each.itemCategory === 'Music'){
+        else if (each.itemCategory === 'Music'){
             let musicAmount = each.price * each.quantity
             tax = (musicAmount * 3) /100   // tax rate on Music items is 3% //
             totalBill += musicAmount + tax
             totalTax += tax
         }
-        if (each.itemCategory === 'Imported'){
+        else if (each.itemCategory === 'Imported'){
             let importedAmount = each.price * each.quantity
             tax = (importedAmount * 18) /100   // tax rate on Imported items is 18% //
             totalBill += importedAmount + tax
             totalTax += tax
         }
-        if (each.itemCategory === 'Book'){
+        else if (each.itemCategory === 'Book'){
             totalBill += each.price * each.quantity   // No tax rate on Books //
         }
     });
